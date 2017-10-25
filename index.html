@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/raphael.js"></script>
+		<script src="js/jquery.usmap.js"></script>
+		<script>
+	$(document).ready(function() {
 
+	  $('#map').usmap({
+	    'stateStyles': {
+	      fill: 'white'
+	    },
+	    'stateHoverStyles': {
+	      fill: 'black'
+	    },
+	   
+	    
+	    'click': function(event, data) {
+		    $('#clicked-state')
+		      .text('You clicked: '+data.name)
+		      .parent().effect('highlight', {color: '#C7F464'}, 2000);
+		  }
+	  });
+	  
+		</script>
+	</head>
+	<body>
+	<header>
+		<a href = "">Home</a>
+		<a href = "">About</a>
+	</header>
+
+	<div id="map" style="width: 100%; height: auto;"></div>
+	<div id="clicked-state"></div>
+</body>
+</html>
