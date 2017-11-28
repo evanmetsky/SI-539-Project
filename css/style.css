@@ -63,6 +63,10 @@ button {
     margin-left:50px;
     width:100%;
 }
+#logo{
+    width:50%;
+    float:right;
+}
 
 .main-color {
     color: #1abc9c;

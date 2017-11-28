@@ -23,13 +23,17 @@
 	      fill: 'white'
 	    },
 	    'stateHoverStyles': {
-	      fill: 'black'
+	      fill: '#FFD348'
 	    },
 	   
 	    
 	    'click': function(event, data) {
-		    $('#clicked-state').text('You clicked: '+ data.name);
+	    	var state_ab = data.name
+		    $('#clicked-state').text('You clicked: '+ state_ab);
 	    	$("#myModal").modal();
+	    	var states = {MI:['Michigan', 'Pannukakku', 'Pannukakku is basically a Finnish pancake made with essentially the same ingredients, but with the addition of lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], NY:['New York'], NJ:['New Jersey', 'Pork Roll', 'Also known as Taylor Ham, the pork roll was reportedly invented in 1856 by John Taylor and is sliced and pan-fried or grilled ham (or Spam). The most popular breakfast item generally consists of pork roll on a bun or bagel, with a fried egg, American cheese, sometimes lettuce and/or tomato, and topped with condiments such as salt, pepper, ketchup, mustard, and hot sauce. It has also been called a Jersey Breakfast.'], PA:['Pennsylvania']}
+	    	$(".modal-title").text(states[state_ab][0])
+	    	$(".modal-body").text(states[state_ab][1])
 	    	
 		  }
 	  });
@@ -41,8 +45,22 @@
 	</head>
 	<body>
 	<header>
-		<a href = "">Home</a>
-		<a href = "">About</a>
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <a class="navbar-brand" href="#"><img src="images/logo.png" id = "logo" class="img-responsive" alt="Pancakes"></a>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="#">MAP<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="#">ABOUT</a>
+			      </li>
+			    </ul>
+			  </div>
+			</nav>
 	</header>
 	<div class = "container">
 		
@@ -58,6 +76,7 @@
 		          <h4 class="modal-title">State</h4>
 		        </div>
 		        <div class="modal-body">
+		        	
 		          <p>Info</p>
 		        </div>
 		        <div class="modal-footer">
