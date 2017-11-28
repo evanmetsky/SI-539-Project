@@ -52,6 +52,17 @@ button {
 #main {
     margin: 50px 0;
 }
+.modal-title{
+   margin:auto;
+}
+.modal-footer{
+    margin: auto;
+}
+#map{
+    margin-top:50px;
+    margin-left:50px;
+    width:100%;
+}
 
 .main-color {
     color: #1abc9c;
