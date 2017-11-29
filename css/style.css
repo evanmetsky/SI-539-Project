@@ -295,6 +295,22 @@ div.blog-post {
     padding-bottom: 5%;
 }
 
+.blog-detail {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.white-spacing p {
+    font-size: 3vw;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 1199px) {
@@ -373,6 +389,21 @@ div.blog-post {
     .custom-pad-2 {
         padding-left: 15px;
     }
+    .blog-detail {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.white-spacing p {
+    font-size: 3.5vw;
+}
 }
 
 
@@ -386,6 +417,21 @@ div.blog-post {
         font-size: 13px;
         width: 90px;
     }
+    .blog-detail {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.white-spacing p {
+    font-size: 4vw;
+}
 }
 
 
@@ -402,6 +448,21 @@ div.blog-post {
         text-align: left;
         width: 100%;
     }
+    .blog-detail {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+.white-spacing p {
+    font-size: 4vw;
+}
 }
 
 
@@ -560,4 +621,21 @@ div.blog-post {
     .scroll-to-top {
         font-size: 25px;
     }
+
+.blog-detail {
+    width: 50%;
+    text-align: center;
+    margin-bottom: 30px;
+    background: #ffffff;
+    box-shadow: none;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c1c1c1;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.white-spacing p {
+    font-size: 4vw;
+}
 }
