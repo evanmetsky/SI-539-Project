@@ -1,3 +1,6 @@
+/* Global Style */
+
+
 body {
     font-family: "Poppins", sans-serif;
     background: #fafafa !important;
@@ -52,21 +55,6 @@ button {
 #main {
     margin: 50px 0;
 }
-.modal-title{
-   margin:auto;
-}
-.modal-footer{
-    margin: auto;
-}
-#map{
-    margin-top:50px;
-    margin-left:50px;
-    width:100%;
-}
-#logo{
-    width:50%;
-    float:right;
-}
 
 .main-color {
     color: #1abc9c;
@@ -103,6 +91,10 @@ button {
     padding-top: 30px;
     padding-bottom: 60px;
 
+}
+
+.grabbing {
+    cursor: url(../images/owl-carousel/grabbing.png) 8 8, move;
 }
 
 .button {
