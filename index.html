@@ -13,6 +13,22 @@
 		<script src="js/jquery.usmap.js"></script>
 
 		<script>
+		function myFunction() {
+		    var input, filter, ul, li, a, i;
+		    input = document.getElementById("search");
+		    filter = input.value.toUpperCase();
+		    ul = document.getElementById("stateUL");
+		    li = ul.getElementsByTagName("li");
+		    for (i = 0; i < li.length; i++) {
+		        a = li[i].getElementsByTagName("a")[0];
+		        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		            li[i].style.display = "";
+		        } else {
+		            li[i].style.display = "none";
+
+		        }
+		    }
+		}
 	function stateDetails(state_name){
 
 	}
@@ -29,11 +45,18 @@
 	    
 	    'click': function(event, data) {
 	    	var state_ab = data.name
-		    $('#clicked-state').text('You clicked: '+ state_ab);
-	    	$("#myModal").modal();
-	    	var states = {MI:['Michigan', 'Pannukakku', 'Pannukakku is basically a Finnish pancake made with essentially the same ingredients, but with the addition of lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], NY:['New York'], NJ:['New Jersey', 'Pork Roll', 'Also known as Taylor Ham, the pork roll was reportedly invented in 1856 by John Taylor and is sliced and pan-fried or grilled ham (or Spam). The most popular breakfast item generally consists of pork roll on a bun or bagel, with a fried egg, American cheese, sometimes lettuce and/or tomato, and topped with condiments such as salt, pepper, ketchup, mustard, and hot sauce. It has also been called a Jersey Breakfast.'], PA:['Pennsylvania']}
-	    	$(".modal-title").text(states[state_ab][0])
-	    	$(".modal-body").text(states[state_ab][1])
+		   
+	    	
+	    	var states = {MI:['Michigan', 'images/pannukakku.jpg', 'Pannukakku', 'Pannukakku is a Finnish pancake made with the same ingredients, but with lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], NY:['New York', 'images/bagel.jpeg','Bagels', 'Apologies to New Yorkers living outside of New York City, but when the best bagels in the world come from somewhere in your state, it needs to be acknowledged. For the epitome of a New York breakfast, order your fresh bagel with a schmear of cream cheese and some lox or smoked salmon.'], NJ:['New Jersey', 'images/pork_roll.jpg','Pork Roll', 'Also known as Taylor Ham, the pork roll was reportedly invented in 1856 by John Taylor and is sliced and pan-fried or grilled ham (or Spam). The most popular breakfast item generally consists of pork roll on a bun or bagel, with a fried egg, American cheese, sometimes lettuce and/or tomato, and topped with condiments such as salt, pepper, ketchup, mustard, and hot sauce. It has also been called a Jersey Breakfast.'], PA:['Pennsylvania', 'images/fasnacht.jpg', 'Fasnacht', 'A Pennsylvania Dutch creation, fasnacht is the name of both a festival (which takes place the day before Lent begins) and the fried doughnuts served on that day. Traditionally made as a way to empty the pantry of lard, sugar, fat, and butter before religious fasting, the square or circular pastries can be purchased year-round in Pennsylvania, especially in the eastern part of the state.'], IN:['Indiana', 'Fried Cornmeal Mush', 'Straight out of Amish Country, fried cornmeal mush is a breakfast staple all over the state of Indiana. A simple dish made of only cornmeal, water, and salt boiled together, cooled, and cut, it is usually consumed with maple syrup or sausage gravy.']}
+	    	if (state_ab in states){
+	    		$("#myModal").modal();
+	    		$(".modal-title").text(states[state_ab][0])
+		    	$("#food-image").attr("src", states[state_ab][1])
+		    	$("#food").text(states[state_ab][2])
+		    	$("#desc").text(states[state_ab][3])
+	    	}
+	    	
+
 	    	
 		  }
 	  });
@@ -59,11 +82,18 @@
 			        <a class="nav-link" href="#">ABOUT</a>
 			      </li>
 			    </ul>
+			    
 			  </div>
 			</nav>
 	</header>
 	<div class = "container">
-		
+		<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for states.." title="Type in a name">
+					<ul id="stateUL">
+					  <li><a href="#">Michigan</a></li>
+					  <li><a href="#">New Jersey</a></li>
+					  <li><a href="#">New York</a></li>
+					  <li><a href="#">Pennsylvania</a></li>
+					</ul>
 		<div id="map"></div>
 				
 		<div class="modal" id="myModal" data-backdrop="false" role="dialog">
@@ -76,11 +106,28 @@
 		          <h4 class="modal-title">State</h4>
 		        </div>
 		        <div class="modal-body">
-		        	
-		          <p>Info</p>
-		        </div>
+		        	<div class = "row">
+		        		<div class="col-md-6 col-sm-6 col-xs-10">
+		        			<h6 id = "food" /> 
+		        		</div>
+			        </div>
+			        <div class = "row">
+			        	<div class="col-md-6 col-sm-6 col-xs-10">
+			        		<img class='img-responsive' id="food-image" />
+			        		
+			        	</div>
+			        	<div class="col-md-6 col-sm-6 col-xs-10">
+			        		<p id = "desc" />
+			        		
+			        	</div>
+			        	
+			        </div>
+			     	
 		        <div class="modal-footer">
-		          <button type="button" class="btn btn-default">See More</button>
+		        	
+			        	<button type="button" class="btn btn-default"><h3>Recipe</h3></button>	
+
+		          
 		        </div>
 		      </div>
 		      

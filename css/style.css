@@ -48,7 +48,9 @@ button {
 *:focus {
     outline: 0;
 }
-
+#food-image{
+    width:100%;
+}
 #main {
     margin: 50px 0;
 }
@@ -67,7 +69,15 @@ button {
     width:50%;
     float:right;
 }
-
+#stateUL li a{
+   text-decoration: none !important;
+}
+#search{
+     border: 2px solid #FFD348;
+     border-radius: 5px;
+     width:40%;
+     height:40px;
+}
 .main-color {
     color: #1abc9c;
 }
