@@ -639,3 +639,32 @@ div.blog-post {
     font-size: 4vw;
 }
 }
+
+#food-image{
+    width:100%;
+}
+#main {
+    margin: 50px 0;
+}
+.modal-title{
+   margin:auto;
+}
+.modal-footer{
+    margin: auto;
+}
+#map{
+    margin-top:50px;
+    margin-left:50px;
+    width:100%;
+}
+#logo{
+    width:50%;
+    float:right;
+}
+
+#search{
+     border: 2px solid #FFD348;
+     border-radius: 5px;
+     width:40%;
+     height:40px;
+}
