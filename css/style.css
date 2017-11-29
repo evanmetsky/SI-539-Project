@@ -274,6 +274,27 @@ div.blog-post {
     font-family: "Poppins", sans-serif;
 }
 
+.page-width {
+    width: 80%;
+    margin: 0 auto;
+}
+.blog-pic {
+    width: 100%;
+}
+
+.blog-pic img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 10%;
+}
+}
+.blog-name {
+    text-align: center;
+}
+.container {
+    padding-bottom: 5%;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 1199px) {
