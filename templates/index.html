@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Home</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="../static/css/style.css" />
+		    <link href="../static/css/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../static/js/raphael.js"></script>
+		<script src="../static/js/jquery.usmap.js"></script>
+
+		<script>
+		function myFunction() {
+		    var input, filter, ul, li, a, i;
+		    input = document.getElementById("search");
+		    filter = input.value.toUpperCase();
+		    ul = document.getElementById("stateUL");
+		    li = ul.getElementsByTagName("li");
+		    for (i = 0; i < li.length; i++) {
+		        a = li[i].getElementsByTagName("a")[0];
+		        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		            li[i].style.display = "";
+		        } else {
+		            li[i].style.display = "none";
+
+		        }
+		    }
+		}
+	function stateDetails(state_name){
+
+	}
+	$(document).ready(function() {
+
+	  $('#map').usmap({
+	    'stateStyles': {
+	      fill: 'white'
+	    },
+	    'stateHoverStyles': {
+	      fill: '#FFD348'
+	    },
+	   
+	    
+	    'click': function(event, data) {
+	    	var state_ab = data.name
+		   
+	    	
+
+	    	var states = {MI:['Michigan', 'static/img/pannukakku.jpg', 'Pannukakku', 'Pannukakku is a Finnish pancake made with the same ingredients, but with lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], NY:['New York', 'static/img/bagel.jpeg','Bagels', 'Apologies to New Yorkers living outside of New York City, but when the best bagels in the world come from somewhere in your state, it needs to be acknowledged. For the epitome of a New York breakfast, order your fresh bagel with a schmear of cream cheese and some lox or smoked salmon.'], NJ:['New Jersey', 'static/img/pork_roll.jpg','Pork Roll', 'Also known as Taylor Ham, the pork roll was reportedly invented in 1856 by John Taylor and is sliced and pan-fried or grilled ham (or Spam). The most popular breakfast item generally consists of pork roll on a bun or bagel, with a fried egg, American cheese, sometimes lettuce and/or tomato, and topped with condiments such as salt, pepper, ketchup, mustard, and hot sauce. It has also been called a Jersey Breakfast.'], PA:['Pennsylvania', 'static/img/fasnacht.jpg', 'Fasnacht', 'A Pennsylvania Dutch creation, fasnacht is the name of both a festival (which takes place the day before Lent begins) and the fried doughnuts served on that day. Traditionally made as a way to empty the pantry of lard, sugar, fat, and butter before religious fasting, the square or circular pastries can be purchased year-round in Pennsylvania, especially in the eastern part of the state.'], AZ:['Arizona', 'static/img/arizona_state_food_pic.jpg', 'Machaca Breakfast Burrito', 'This is a classic take on a Mexican Machaca, a breakfast burritor with eggs, beef or pork, tomatoes and salsa.'], CO: ['Colorado', 'static/img/colorado_state_food_pic.jpeg', 'Cinnamon Roll', 'A cinnamon roll is a sweet roll served commonly in Northern Europe and North America. In North America, its common use is as breakfast or dessert']}
+	    	if (state_ab in states){
+	    		$("#myModal").modal();
+	    		$(".modal-title").text(states[state_ab][0])
+		    	$("#food-image").attr("src", states[state_ab][1])
+		    	$("#food").text(states[state_ab][2])
+		    	$("#desc").text(states[state_ab][3])
+	    	}
+	    	
+
+	    	
+		  }
+	  });
+	  
+	  
+	 
+	});
+		</script>
+	</head>
+	<body>
+	<header>
+		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+			  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			    <span class="navbar-toggler-icon"></span>
+			  </button>
+			  <a class="navbar-brand" href="index.html"><img src="../static/img/logo.png" id = "logo" class="img-responsive" alt="Pancakes"></a>
+			  <div class="collapse navbar-collapse" id="navbarNav">
+			    <ul class="navbar-nav">
+			      <li class="nav-item active">
+			        <a class="nav-link" href="index.html">HOME<span class="sr-only">(current)</span></a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="recipe.html">RECIPES</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="blog.html">BLOG</a>
+			      </li>
+			    </ul>
+			    
+			  </div>
+			</nav>
+	</header>
+	<div class = "container">
+			
+			<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for states.." title="Type in a name">
+				<ul id="stateUL">
+					<li><a href="#">Arizona</a></li>
+					<li><a href="#">Colorado</a></li>
+				  <li><a href="#">Michigan</a></li>
+				  <li><a href="#">New Jersey</a></li>
+				  <li><a href="#">New York</a></li>
+				  <li><a href="#">Pennsylvania</a></li>
+				</ul>
+		<div id="map"></div>
+				
+		<div class="modal" id="myModal" data-backdrop="false" role="dialog">
+		    <div class="modal-dialog">
+		    
+		      <!-- Modal content-->
+		      <div class="modal-content">
+		        <div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">State</h4>
+		        </div>
+		        <div class="modal-body">
+		        	<div class = "row">
+		        		<div class="col-md-6 col-sm-6 col-xs-10">
+		        			<h6 id = "food" /> 
+		        		</div>
+			        </div>
+			        <div class = "row">
+			        	<div class="col-md-6 col-sm-6 col-xs-10">
+			        		<img class='img-responsive' id="food-image" />
+			        		
+			        	</div>
+			        	<div class="col-md-6 col-sm-6 col-xs-10">
+			        		<p id = "desc" />
+			        		
+			        	</div>
+			        	
+			        </div>
+			     	
+		        <div class="modal-footer">
+		        	
+			        	<button type="button" class="btn btn-default"><h3>Recipe</h3></button>	
+
+		          
+		        </div>
+		      </div>
+		      
+		    </div>
+		  </div>
+		  <div id="clicked-state"></div>
+	</div>
+<footer>
+	<div class="footer-container">
+		<p class= "credit">
+			Design By <br>
+			<span id ="credit">Aaron Tang &nbsp;&nbsp; Evan Mestky&nbsp;&nbsp; Marcy Held  &nbsp;&nbsp;Ling Zhong <br>
+			with Passion, Calmness, Love <br></span>
+	</div>
+</footer>
+</body>
+</html>
