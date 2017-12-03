@@ -293,6 +293,16 @@ div.blog-post {
     font-family: "Poppins", sans-serif;
 }
 
+footer {
+    background-color: #F6F6F6;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+footer p {
+    text-align: center;
+}
+
 /* Responsive */
 
 @media only screen and (max-width: 1199px) {
