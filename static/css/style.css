@@ -79,6 +79,12 @@ button {
      width:40%;
      height:40px;
 }
+
+.modal-footer p{
+    font-size: 2vw;
+}
+
+
 .main-color {
     color: #1abc9c;
 }
