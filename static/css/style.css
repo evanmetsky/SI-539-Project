@@ -1,7 +1,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #fafafa !important;
+    background-color: #F0F0F0 !important;
 }
 
 html {
@@ -292,6 +292,7 @@ footer p {
 
 /*HOME . MAP*/
 #search-main h3{
+    font-size:20px;
     margin-top:5%;
     text-align: center;
     font-family: "Poppins", sans-serif;
@@ -299,7 +300,28 @@ footer p {
 .navbar-collapse.collapse.in {
   display: block!important;
 }
+#navbar-header{
+    left:0;
+    float:left;
+}
+.navbar{
 
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #22c1c3, #fdbb2d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #22c1c3, #fdbb2d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #22c1c3, #fdbb2d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #22c1c3, #fdbb2d); /* Standard syntax */
+
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color:white!important;
+}
+.nav-item.active a{
+        color:white!important;
+}
+#recipe_link p{
+    font-size:24px;
+}
 
 /* Responsive */
 
@@ -308,9 +330,14 @@ footer p {
 
 /*Large*/
 @media only screen and (min-width: 1001px){
-
+    #begin{
+        font-size:20px;
+        margin-top:5%;
+        margin-bottom:5%;
+        text-align: left;
+        font-family: "Poppins", sans-serif;
+    }
     #map{
-      
         width:100%;
     }
     #logo{
@@ -324,14 +351,19 @@ footer p {
 
 }
 /*Medium/tablet*/
+
 @media only screen and (max-width:1000px){
-  
+
+ #begin{
+        display:none;
+    }
+
   #map{
       
         display:none!important;
     }
     #logo{
-        width:33%;
+        width:50%;
         float:left;
         margin-left:20%;
     }
@@ -375,6 +407,63 @@ footer p {
     }
 
 }
+/*Small*/
+@media only screen and (max-width:640px){
+    #begin{
+        display:none;
+    }
+
+  #map{
+      
+        display:none!important;
+    }
+    #logo{
+        width:33%;
+        float:left;
+        margin-left:20%;
+    }
+
+    #search-main{
+           display:block !important;
+    }
+    #search{
+        background-image: url('../img/search-icon.png');
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size:7%;
+        font-size: 16px;
+        margin-top:5%;
+        width:100%;
+        height:60px;
+        padding:30px 40px 30px 60px;
+        border:1px solid black;
+        border-radius:10px;
+        margin-bottom:5%;
+        font-family: "Poppins", sans-serif;
+    }
+    #stateUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+    #stateUL li a {
+        border: 1px solid #ddd; 
+        margin-top: -1px; 
+        background-color: #f6f6f6; 
+        padding: 12px; 
+        text-align: center;
+        text-decoration: none; 
+        font-size: 18px; 
+        color: black; 
+        display: block; 
+}
+    #stateUL li a:hover:not(.header) {
+        background-color: orange; /* Add a hover effect to all links, except for headers */
+    }
+
+}
+
 /*
 
 
@@ -648,7 +737,7 @@ footer p {
 
 body {
     font-family: "Poppins", sans-serif;
-    background: #fafafa !important;
+    background-color: #F0F0F0 !important;
 }
 
 html {

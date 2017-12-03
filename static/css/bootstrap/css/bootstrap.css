@@ -4002,7 +4002,7 @@ tbody.collapse.show {
   right: 1rem;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 400px) {
   .navbar-toggleable .navbar-nav .dropdown-menu {
     position: static;
     float: none;
@@ -4013,7 +4013,7 @@ tbody.collapse.show {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: px) {
   .navbar-toggleable {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -4137,7 +4137,7 @@ tbody.collapse.show {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 640px) {
   .navbar-toggleable-md {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
