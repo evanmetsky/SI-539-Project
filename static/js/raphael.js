@@ -4337,7 +4337,7 @@ window.Raphael.svg && function (R) {
         eve("setViewBox", this, this._viewBox, [x, y, w, h, fit]);
         var size = mmax(w / this.width, h / this.height),
             top = this.top,
-            aspectRatio = fit ? "meet" : "xMinYMin",
+            aspectRatio = fit ? "meet" : "xMaxYMax",
             vb,
             sw;
         if (x == null) {
