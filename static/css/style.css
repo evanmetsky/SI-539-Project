@@ -319,8 +319,9 @@ footer p {
 .nav-item.active a{
         color:white!important;
 }
-#recipe_link p{
+#recipe_link button{
     font-size:24px;
+    color:blue;
 }
 
 /* Responsive */
