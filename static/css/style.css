@@ -79,6 +79,12 @@ button {
      width:40%;
      height:40px;
 }
+
+.modal-footer p{
+    font-size: 2vw;
+}
+
+
 .main-color {
     color: #1abc9c;
 }
@@ -291,6 +297,16 @@ div.blog-post {
     font-weight: 300;
     letter-spacing: 0.8px;
     font-family: "Poppins", sans-serif;
+}
+
+footer {
+    background-color: #F6F6F6;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+footer p {
+    text-align: center;
 }
 
 /* Responsive */
@@ -870,7 +886,7 @@ div.blog-post {
 }
 
 .white-spacing p {
-    font-size: 3vw;
+    font-size: 100%;
 }
 
 /* Responsive */
@@ -1230,6 +1246,9 @@ div.blog-post {
      width:40%;
      height:40px;
 }
+
+
+
 >>>>>>> b17653056b31b290276c42662101bfcfcc31dbde
 
 .recipe-pic {
@@ -1322,5 +1341,65 @@ div.card:hover {
     .card {
         width: 100%;
         margin:auto;
+    }
+}
+
+/* Comment area*/
+
+.comments,
+.comments ul {
+    list-style: none;
+}
+
+.comments__title {
+    letter-spacing: .05em;
+    margin-bottom: 5rem;
+}
+
+
+.form--full input:not([type="checkbox"]):not([type="radio"]),
+.form--full select,
+.form--full textarea,
+.form--full fieldset {
+    display: block;
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+.form--full label input {
+    display: inline-block;
+}
+
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #FF5A5F;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: absolute;
+}
+
+
+.button:hover {
+    background-color: #a7271f;
+    color: #ffffff;
+}
+
+
+.button--right {
+    right: 20px;
+}
+
+@media (min-width: 75em) {
+    .button--right {
+        margin-left: auto;
+        margin-right: 0;
     }
 }

@@ -29,10 +29,10 @@
 		        }
 		    }
 		}
-		$("svg")
+
 		</script>
 	</head>
-	<body>
+<body>
 	<header>
 		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
 			  <button id = "hamburger" class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="true" aria-label="Toggle navigation">
@@ -65,12 +65,12 @@
 			
 			<input type="text" id="search" onkeyup="myFunction()" placeholder="Search for states.." title="Type in a name">
 				<ul id="stateUL">
-					<li><a href="#">Arizona</a></li>
-					<li><a href="#">Colorado</a></li>
-				  <li><a href="#">Michigan</a></li>
-				  <li><a href="#">New Jersey</a></li>
-				  <li><a href="#">New York</a></li>
-				  <li><a href="#">Pennsylvania</a></li>
+					<li><a href="arizona_recipe.html">Arizona</a></li>
+					<li><a href="colorado.html">Colorado</a></li>
+				  <li><a href="michigan_recipe.html">Michigan</a></li>
+				  <li><a href="newjersey_recipe.html">New Jersey</a></li>
+				  <li><a href="newyork_recipe.html">New York</a></li>
+				  <li><a href="pennsylvania_recipe.html">Pennsylvania</a></li>
 				</ul>
 				<div class = "row">
 					<div id="map"></div>
@@ -89,39 +89,33 @@
 		        <div class="modal-body">
 		        	<div class = "row">
 		        		<div class="col-md-6 col-sm-6 col-xs-10">
-		        			<h6 id = "food" /> 
+		        			<h6 id = "food"></h6>
 		        		</div>
 			        </div>
 			        <div class = "row">
 			        	<div class="col-md-6 col-sm-6 col-xs-10">
-			        		<img class='img-responsive' id="food-image" />
-			        		
+			        		<img class='img-responsive' id="food-image" alt="food-image" />	
 			        	</div>
 			        	<div class="col-md-6 col-sm-6 col-xs-10">
-			        		<p id = "desc" />
-			        		
-			        	</div>
-			        	
+			        		<p id = "desc"></p>
+			        	</div> 	
 			        </div>
-			     	
-		        <div class="modal-footer">
-		        	
-			        	<button type="button" class="btn btn-default"><h3>Recipe</h3></button>	
-
-		          
+			     </div>
+		        <div class="modal-footer">	        	
+			        <button type="button" class="btn btn-default"><p>Recipe</p></button>	
 		        </div>
 		      </div>
-		      
 		    </div>
 		  </div>
 		  <div id="clicked-state"></div>
-	</div>
+</div>
 <footer>
 	<div class="footer-container">
 		<p class= "credit">
 			Design By <br>
-			<span id ="credit">Aaron Tang &nbsp;&nbsp; Evan Mestky&nbsp;&nbsp; Marcy Held  &nbsp;&nbsp;Ling Zhong <br>
+			<span id ="credit">Aaron Tang &nbsp;&nbsp; Evan Metsky&nbsp;&nbsp; Marcy Held  &nbsp;&nbsp;Ling Zhong <br>
 			with Passion, Calmness, Love <br></span>
+		</p>
 	</div>
 </footer>
 </body>
