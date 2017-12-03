@@ -307,10 +307,10 @@ footer p {
 .navbar{
 
     background: red; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left, #3494E6, #EC6EAD); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(left, #3494E6, #EC6EAD); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(left, #3494E6, #EC6EAD); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(left, #3494E6, #EC6EAD); /* Standard syntax */
+    background: -webkit-linear-gradient(left, #22c1c3, #fdbb2d); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #22c1c3, #fdbb2d); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #22c1c3, #fdbb2d); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #22c1c3, #fdbb2d); /* Standard syntax */
 
 }
 .navbar-light .navbar-nav .nav-link:hover{
