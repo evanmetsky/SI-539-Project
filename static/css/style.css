@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
     font-family: "Poppins", sans-serif;
     background: #fafafa !important;
@@ -52,33 +52,14 @@ button {
 #food-image{
     width:100%;
 }
-#main {
-    margin: 50px 0;
-}
+
 .modal-title{
    margin:auto;
 }
 .modal-footer{
     margin: auto;
 }
-#map{
-    margin-top:50px;
-    margin-left:50px;
-    width:100%;
-}
-#logo{
-    width:50%;
-    float:right;
-}
-#stateUL li a{
-   text-decoration: none !important;
-}
-#search{
-     border: 2px solid #FFD348;
-     border-radius: 5px;
-     width:40%;
-     height:40px;
-}
+
 
 .modal-footer p{
     font-size: 2vw;
@@ -309,7 +290,93 @@ footer p {
     text-align: center;
 }
 
+/*HOME . MAP*/
+#search-main h3{
+    margin-top:5%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+.navbar-collapse.collapse.in {
+  display: block!important;
+}
+
+
 /* Responsive */
+
+/*MAP 3 VIEWS*/
+
+
+/*Large*/
+@media only screen and (min-width: 1001px){
+
+    #map{
+      
+        width:100%;
+    }
+    #logo{
+        width:50%;
+        float:right;
+    }
+
+    #search-main{
+           display:none !important;
+    }
+
+}
+/*Medium/tablet*/
+@media only screen and (max-width:1000px){
+  
+  #map{
+      
+        display:none!important;
+    }
+    #logo{
+        width:33%;
+        float:left;
+        margin-left:20%;
+    }
+
+    #search-main{
+           display:block !important;
+    }
+    #search{
+        background-image: url('../img/search-icon.png');
+        background-repeat: no-repeat;
+        background-position: 10px 10px;
+        background-size:7%;
+        font-size: 20px;
+        margin-top:5%;
+        width:100%;
+        height:60px;
+        padding:30px 40px 30px 60px;
+        border:1px solid black;
+        border-radius:10px;
+        margin-bottom:5%;
+        font-family: "Poppins", sans-serif;
+    }
+    #stateUL {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+    }
+    #stateUL li a {
+        border: 1px solid #ddd; /* Add a border to all links */
+        margin-top: -1px; /* Prevent double borders */
+        background-color: #f6f6f6; /* Grey background color */
+        padding: 12px; /* Add some padding */
+        text-decoration: none; /* Remove default text underline */
+        font-size: 18px; /* Increase the font-size */
+        color: black; /* Add a black text color */
+        display: block; /* Make it into a block element to fill the whole list */
+}
+    #stateUL li a:hover:not(.header) {
+        background-color: orange; /* Add a hover effect to all links, except for headers */
+    }
+
+}
+/*
+
 
 @media only screen and (max-width: 1199px) {
     .endpage-box {
@@ -360,7 +427,7 @@ footer p {
 }
 
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 680px) {
 
     .about-fixed {
         position: inherit;
@@ -574,7 +641,7 @@ footer p {
     .scroll-to-top {
         font-size: 25px;
     }
-}
+}*/
 =======
 /* Global Style */
 
@@ -670,11 +737,11 @@ button {
     padding-bottom: 60px;
 
 }
-
+/*
 .grabbing {
     cursor: url(../images/owl-carousel/grabbing.png) 8 8, move;
-}
-
+}*/
+/*
 .button {
     border: none;
     font-family: inherit;
@@ -746,7 +813,7 @@ button {
 .button-anim:hover:before {
     left: 75%;
     opacity: 1;
-}
+}*/
 
 /* recipe (Left Sidebar) */
 
@@ -890,7 +957,7 @@ div.blog-post {
 }
 
 /* Responsive */
-
+/*
 @media only screen and (max-width: 1199px) {
     .endpage-box {
         display: none !important;
@@ -940,7 +1007,7 @@ div.blog-post {
 }
 
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 680px) {
 
     .about-fixed {
         position: inherit;
@@ -1217,39 +1284,8 @@ div.blog-post {
     font-size: 4vw;
 }
 }
+*/
 
-#food-image{
-    width:100%;
-}
-#main {
-    margin: 50px 0;
-}
-.modal-title{
-   margin:auto;
-}
-.modal-footer{
-    margin: auto;
-}
-#map{
-    margin-top:50px;
-    margin-left:50px;
-    width:100%;
-}
-#logo{
-    width:50%;
-    float:right;
-}
-
-#search{
-     border: 2px solid #FFD348;
-     border-radius: 5px;
-     width:40%;
-     height:40px;
-}
-
-
-
->>>>>>> b17653056b31b290276c42662101bfcfcc31dbde
 
 .recipe-pic {
     width: 100%;
