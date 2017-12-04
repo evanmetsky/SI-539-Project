@@ -89,7 +89,45 @@
                         
                         </div>
                     </div>
+                    <!-- Comment area start -->
+                    <div class = "container" id = "posted-comments">
 
+                        <div class = "row">
+                            <div class="col-12 comments">
+
+                                <form>
+                                    <div class = "row">
+                                        <div class = "col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="nickname">Name or nickname</label>
+                                                <input type="text" class="form-control" id="nickname" placeholder="Enter public name">
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="emailConfirm">Email address</label>
+                                                <input type="email" class="form-control" id="emailConfirm" placeholder="Enter email">
+                                                <small id="message" class="form-text text-muted">Your email will not be shared!</small>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="comment">Comment</label>
+                                        <textarea class="form-control" id="comment" placeholder="Write your comment here..."></textarea>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary" onclick="onSubmit()">Submit Comment</button>
+                                </form>
+
+                            </div>
+                            <div class = "col-1"></div>
+                        </div>
+                    </div>
+
+                    <!-- Comment area End -->
                 </div>
             </div>
             <!-- Recipe (Right Sidebar) End -->
