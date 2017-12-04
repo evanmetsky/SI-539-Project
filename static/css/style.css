@@ -1494,19 +1494,15 @@ div.card:hover {
 }
 
 
-.form--full input:not([type="checkbox"]):not([type="radio"]),
-.form--full select,
-.form--full textarea,
-.form--full fieldset {
-    display: block;
-    margin-bottom: .5rem;
-    width: 100%;
+#name_style{
+    padding-top:10px;
 }
-
-.form--full label input {
-    display: inline-block;
+#new_comment{
+    margin-top:3%;
 }
-
+#special_comment_text{
+    font-size:12pt;
+}
 .button {
     display: inline-block;
     border-radius: 4px;

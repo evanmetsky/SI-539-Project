@@ -14,6 +14,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+
+    <script>
+        var d = new Date();
+
+        var clean_date = (d.getMonth()+1) + '/' + d.getDate() + '/'+ d.getFullYear();
+        function onSubmit() {
+            var name = document.getElementById("nickname").value
+            var comment = document.getElementById("comment").value
+            var date_div = '<div class = "col-md-12" id = "new_comment">'+clean_date+'</div>'
+            $('#posted-comments').append(date_div);
+            var newDivs = '<div class="col-md-12 page-body" =><h4 id = "name_style">'+name+'<span id = "special_comment_text">'+' says...</span></h4><p>'+comment+'</p></div>'
+            $('#posted-comments').append(newDivs);          
+        }
+
+    </script>
 <header>
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
                   <button id = "hamburger" class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -208,16 +223,45 @@
             <!-- Content (Right Sidebar) End -->  
     
             <!-- Comment area start -->
-        <div class="col-md-12 comments">
-         <div class="container">
-            <form action="#0" class="form--full">
-                <textarea placeholder="Leave your comment here ..." cols="30" rows="7"></textarea>
-                <input type="text" placeholder="* Name" required>
-                <input type="email" placeholder="* Email" required>
-                <div><a href="#0" class="button button--right">Post Comment</a></div>
-            </form>
+    <div class = "container" id = "posted-comments">
+
+    </div>
+
+    <div class = "row">
+        <div class = "col-1"></div>
+            <div class="col-8 comments">
+             
+                <form>
+                    <div class = "row">
+                        <div class = "col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group">
+                                    <label for="nickname">Name or nickname</label>
+                                    <input type="text" class="form-control" id="nickname" placeholder="Enter public name">
+                                  </div>
+                            </div>
+                            <div class = "col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                <label for="emailConfirm">Email address</label>
+                                    <input type="email" class="form-control" id="emailConfirm" placeholder="Enter email">
+                                    <small id="message" class="form-text text-muted">Your email will not be shared!</small>   
+                            </div>
+                                
+                              </div>
+
+                      </div>
+
+                      <div class="form-group">
+                        <label for="comment">Comment</label>
+                        <textarea class="form-control" id="comment" placeholder="Write your comment here..."></textarea>
+                      </div>
+
+                      <button type="button" class="btn btn-primary" onclick="onSubmit()">Submit Comment</button>
+                </form>
+                
             </div>
-        </div>  
+            <div class = "col-1"></div>  
+        </div>
+
       <!-- Comment area End -->
     
    </div>
