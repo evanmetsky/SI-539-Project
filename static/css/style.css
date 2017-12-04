@@ -183,18 +183,6 @@ button {
     width: 18.8%;
 }
 
-@media only screen and (max-width: 680px) {
-
-    .about-fixed {
-        position: inherit;
-        width: auto;
-    }
-
-    .post-quote {
-        width: 90%;
-    }
-}
-
 .state-pic {
     width: 100%;
     box-shadow: none;
@@ -1531,5 +1519,17 @@ div.card:hover {
     .button--right {
         margin-left: auto;
         margin-right: 0;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    .about-fixed {
+        position: inherit;
+        width: auto;
+    }
+
+    .post-quote {
+        width: 90%;
     }
 }
