@@ -183,6 +183,18 @@ button {
     width: 18.8%;
 }
 
+@media only screen and (max-width: 680px) {
+
+    .about-fixed {
+        position: inherit;
+        width: auto;
+    }
+
+    .post-quote {
+        width: 90%;
+    }
+}
+
 .state-pic {
     width: 100%;
     box-shadow: none;
@@ -526,21 +538,6 @@ footer p {
         width: 100px;
     }
 }
-
-
-@media only screen and (max-width: 680px) {
-
-    .about-fixed {
-        position: inherit;
-        width: auto;
-    }
-
-    .post-quote {
-        width: 90%;
-    }
-}
-
-
 
 @media only screen and (max-width: 767px) {
 
