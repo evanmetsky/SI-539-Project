@@ -211,9 +211,7 @@ button {
 
 }
 
-.state-detail .white-spacing {
-    padding: 20px 0;
-}
+
 
 .state-detail h1 {
     font-size: 20px;
@@ -225,6 +223,19 @@ button {
     font-weight: 400;
     line-height: 30px;
     font-size: 16px;
+}
+
+.state-white-spacing {
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.state-white-spacing h1 {
+    font-size: 3vw;
+}
+
+.state-white-spacing span {
+    font-size: 2vw;
 }
 
 /* Blog Post & Single Blog Page */
