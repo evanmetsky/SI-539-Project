@@ -47,23 +47,16 @@
 
             <!-- Location (Left Sidebar) Start -->
             <div class="col-md-3">
-                <div class="blog-detail">
+                <div class="about-fixed">
                     <div class="state-pic">
-                        <img src="../static/img/state/newjersey.jpg" alt="The state of New Jersey">
-                        <div id="menu" class="collapse">
-                            <ul class="menu-link">
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="work.html">Work</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
+                        <img src="../static/img/state/newjersey.jpg" alt="The State of New Jersey">
                     </div>
-
-                        <div class="state-white-spacing">
+                    <div class="state-detail">
+                        <div class="white-spacing">
                             <h1>New Jersey</h1>
                             <span>Trenton</span>
                         </div>
-
+                    </div>
                 </div>
             </div>
             <!-- Location (Left Sidebar) End -->
@@ -101,6 +94,45 @@
                             <p>Source: www.spoonuniversity.com</p>
                         </div>
                     </div>
+                    <!-- Comment area start -->
+                    <div class = "container" id = "posted-comments">
+
+                        <div class = "row">
+                            <div class="col-12 comments">
+
+                                <form>
+                                    <div class = "row">
+                                        <div class = "col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="nickname">Name or nickname</label>
+                                                <input type="text" class="form-control" id="nickname" placeholder="Enter public name">
+                                            </div>
+                                        </div>
+                                        <div class = "col-lg-6 col-md-6 col-sm-12">
+                                            <div class="form-group">
+                                                <label for="emailConfirm">Email address</label>
+                                                <input type="email" class="form-control" id="emailConfirm" placeholder="Enter email">
+                                                <small id="message" class="form-text text-muted">Your email will not be shared!</small>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="comment">Comment</label>
+                                        <textarea class="form-control" id="comment" placeholder="Write your comment here..."></textarea>
+                                    </div>
+
+                                    <button type="button" class="btn btn-primary" onclick="onSubmit()">Submit Comment</button>
+                                </form>
+
+                            </div>
+                            <div class = "col-1"></div>
+                        </div>
+                    </div>
+
+                    <!-- Comment area End -->
                 </div>
             </div>
             <!-- Recipe (Right Sidebar) End -->
