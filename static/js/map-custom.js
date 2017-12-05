@@ -1,4 +1,6 @@
+/*EVAN METSKY*/
 
+/*modal descriptions from: https://www.thedailymeal.com/travel/each-state-s-favorite-breakfast */
 function checkValid(state_ab){
 	var states = {
 			MI:['Michigan', 'michigan_recipe.html','../static/img/pannukakku.jpg', 'Pannukakku', 'Pannukakku is a Finnish pancake made with the same ingredients, but with lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], 
@@ -19,9 +21,6 @@ function checkValid(state_ab){
 }
 
 $(document).ready(function() {
-	
-
-
 	$('#map').usmap({
 	'stateStyles': {
 	  fill: 'white'
@@ -29,12 +28,8 @@ $(document).ready(function() {
 	'stateHoverStyles': {
 	  fill: '#FFD348'
 	},
-
-
 	'click': function(event, data) {
 		var state_ab = data.name
-	   
-		
 		var states = {
 			MI:['Michigan', "michigan_recipe.html",'../static/img/pannukakku.jpg', 'Pannukakku', 'Pannukakku is a Finnish pancake made with the same ingredients, but with lemon, and baked instead of pan-fried. A large population of immigrants from Finland brought it to Michigan decades ago, and the food and its new home have been in a love affair together ever since.'], 
 			NY:['New York', "newyork_recipe.html" , '../static/img/bagel.jpeg','Bagels', 'Apologies to New Yorkers living outside of New York City, but when the best bagels in the world come from somewhere in your state, it needs to be acknowledged. For the epitome of a New York breakfast, order your fresh bagel with a schmear of cream cheese and some lox or smoked salmon.'], 
